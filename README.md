@@ -36,8 +36,6 @@ Cold Anger: Strips exclamation marks and replaces them with periods to force a d
 
 Vulnerability: Injects ellipses (...) and semicolons (;) to trigger SSML-driven hesitations and breath breaks.
 
-⚠️ Note on Initial Execution: On the first run, the system will automatically download the RoBERTa-base model weights (~500MB) from Hugging Face. Please ensure a stable internet connection for this one-time initialization.
-
 💻 Tech Stack
 Language: Python 🐍
 
@@ -48,3 +46,38 @@ Affective Model: RoBERTa-base 🤗
 Neural Synthesis: Microsoft Neural Voices via Edge-TTS 🔊
 
 Data Processing: SSML (Speech Synthesis Markup Language)
+
+⚙️ How to Access & Run
+Option 1: Live Demo (Instant Access)
+Experience the Empathy Engine immediately without any local installation:
+👉 [Link to your Hugging Face Space]
+
+Option 2: Local Installation (Mandatory Setup)
+Follow these steps to set up the environment and run the application on your local machine:
+
+1. Prerequisites
+
+Ensure Python 3.9+ is installed.
+A stable internet connection is required for the initial run to download the model weights.
+⚠️ Note on First Run: The system will automatically download the RoBERTa-base weights (~500MB) from Hugging Face.
+
+2. Clone and Environment Setup
+
+Bash
+git clone https://github.com/DivitSrivastava/TheEmpathyEngine.git
+cd TheEmpathyEngine
+python -m venv venv
+# Activate on Windows:
+venv\Scripts\activate
+# Activate on Mac/Linux:
+source venv/bin/activate
+3. Install Dependencies
+
+Bash
+pip install -r requirements.txt
+4. Execute
+
+Bash
+python app.py
+
+The interface will be accessible at a url which will be mentioned in the terminal.

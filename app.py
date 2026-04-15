@@ -8,7 +8,7 @@ from voices import VoiceEngine
 emotion_engine = EmpathyEngine()
 voice_engine = VoiceEngine()
 
-# Finalized Archetype Samples
+# Archetype Samples
 SAMPLES = {
     "Remorse & Grief (Empath) - [RECOMMENDED]": "I'm so deeply sorry for the pain I've caused you, is there anything I can do to make it up to you.",
     "Nervousness & Fear (Vulnerable)": "I think I heard something move in the attic, but I'm too afraid to go up there and check by myself.",
@@ -52,7 +52,7 @@ async def process_empathy(input_text):
     except Exception as e:
         return None, f"⚠️ System Error: {str(e)}", None, gr.update(interactive=False)
 
-# --- GRADIO UI LAYOUT (Analytics Tool Signature Style) ---
+# --- GRADIO UI LAYOUT ---
 darwix_css = """
 .gradio-container {background-color: #0f172a; color: white;} 
 .gr-button-primary {background: linear-gradient(90deg, #00d2ff, #3a7bd5) !important; border: none !important;}

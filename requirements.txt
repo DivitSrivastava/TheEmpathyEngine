@@ -1,5 +1,5 @@
-gradio
-edge-tts
-transformers
-torch
+gradio==4.19.2
+edge-tts==6.1.10
+transformers==4.38.1
+torch==2.2.1
 asyncio

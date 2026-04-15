@@ -48,11 +48,8 @@ Neural Synthesis: Microsoft Neural Voices via Edge-TTS 🔊
 Data Processing: SSML (Speech Synthesis Markup Language)
 
 ⚙️ How to Access & Run
-Option 1: Live Demo (Instant Access)
-Experience the Empathy Engine immediately without any local installation:
-👉 [Link to your Hugging Face Space]
 
-Option 2: Local Installation (Mandatory Setup)
+Local Installation (Mandatory Setup)
 Follow these steps to set up the environment and run the application on your local machine:
 
 1. Prerequisites

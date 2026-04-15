@@ -16,13 +16,13 @@ class VoiceEngine:
 
         # THE REMORSE/SADNESS LOGIC: Simulates 'heavy' breathing and hesitation
         if emotion in ["remorse", "sadness", "grief", "disappointment"]:
-            # We start with an ellipse to trigger a soft 'intake of breath'
+            # Start with an ellipse to trigger a soft 'intake of breath'
             text = f"... {text}"
-            # We use a semicolon + space to force a reset of the vocal rhythm
+            # Use a semicolon + space to force a reset of the vocal rhythm
             if "," in text:
                 text = text.replace(",", "... ;")
             else:
-                # If no comma, we force a mid-sentence break
+                # If no comma, force a mid-sentence break
                 words = text.split()
                 if len(words) > 4:
                     words.insert(len(words)//2, "... ;")
@@ -31,7 +31,7 @@ class VoiceEngine:
 
         # THE EXCITEMENT LOGIC: High energy, zero-pause 'rushing'
         elif emotion in ["excitement", "joy"]:
-        # Instead of stripping everything, we replace commas with '!' 
+        # Instead of stripping everything, replace commas with '!' 
         # to keep the pitch high, and add '...' for a quick intake of breath.
             text = text.replace(",", "!")
             words = text.split()
@@ -41,17 +41,14 @@ class VoiceEngine:
                 text = " ".join(words)
             text += "!!!"
 
-        # THE ANGER LOGIC: 'Pressurized' delivery
+        # THE ANGER LOGIC
         elif emotion in ["anger", "annoyance"]:
-            # Remove all internal dashes/dots to prevent vague pauses
             text = text.replace("--", "").replace("...", "")
-            
-            # Ensure the sentence ends with a hard period. 
             # Neural engines interpret '!' as a pitch-raise (happy/shouting), 
             # while '.' creates a downward, serious inflection (cold/angry).
             text = text.strip("!").strip(".") + "."
 
-        # THE NERVOUSNESS LOGIC (Your 'Star' performer)
+        # THE NERVOUSNESS LOGIC
         elif emotion in ["nervousness", "fear", "confusion"]:
             # High frequency of rising tones and trailing thoughts
             if "," in text:
@@ -82,10 +79,3 @@ class VoiceEngine:
         
         await communicate.save(output_path)
         return output_path
-
-if __name__ == "__main__":
-    # Test block
-    engine = VoiceEngine()
-    test_params = {"voice": "en-GB-LibbyNeural", "rate": "-20%", "pitch": "-10Hz"}
-    asyncio.run(engine.generate_audio("I'm so sorry, I wish I could have done more to help.", test_params, "sadness"))
-    print("Test audio generated.")

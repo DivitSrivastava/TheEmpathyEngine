@@ -52,13 +52,13 @@ Data Processing: SSML (Speech Synthesis Markup Language)
 Local Installation (Mandatory Setup)
 Follow these steps to set up the environment and run the application on your local machine:
 
-1. Prerequisites
+Step - 1. Prerequisites
 
 Ensure Python 3.9+ is installed.
 A stable internet connection is required for the initial run to download the model weights.
 ⚠️ Note on First Run: The system will automatically download the RoBERTa-base weights (~500MB) from Hugging Face.
 
-2. Clone and Environment Setup
+Step - 2. Clone and Environment Setup
 
 Bash
 git clone https://github.com/DivitSrivastava/TheEmpathyEngine.git
@@ -68,7 +68,8 @@ python -m venv venv
 venv\Scripts\activate
 # Activate on Mac/Linux:
 source venv/bin/activate
-3. Install Dependencies
+
+Step - 3. Install Dependencies
 
 Bash
 pip install -r requirements.txt

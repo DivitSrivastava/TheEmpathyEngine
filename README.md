@@ -36,6 +36,8 @@ Cold Anger: Strips exclamation marks and replaces them with periods to force a d
 
 Vulnerability: Injects ellipses (...) and semicolons (;) to trigger SSML-driven hesitations and breath breaks.
 
+⚠️ Note on Initial Execution: On the first run, the system will automatically download the RoBERTa-base model weights (~500MB) from Hugging Face. Please ensure a stable internet connection for this one-time initialization.
+
 💻 Tech Stack
 Language: Python 🐍
 

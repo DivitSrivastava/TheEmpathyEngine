@@ -1,0 +1,8 @@
+# Ignore generated audio assets
+*.mp3
+
+# Ignore Python environment and cache
+venv/
+__pycache__/
+*.pyc
+.env

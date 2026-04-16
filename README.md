@@ -1,5 +1,4 @@
-# 🎙️ The Empathy Engine: Deep Affective Vocal Synthesis
-
+# 🎙️ The Empathy Engine: Giving AI a Human Voice
 The **Empathy Engine** is a specialized AI application designed to resolve the "Uncanny Valley" in digital speech. It transforms static text into emotionally resonant vocal assets by dynamically modulating speech patterns based on deep sentiment intelligence.
 
 The application leverages the **GoEmotions** dataset (28 granular labels) and **RoBERTa-base** to extract affective intent, applying sophisticated Neural Timbre Switching, Prosody Modulation, and Contextual Text Massaging. By utilizing **Dynamic Intensity Scaling**, the system ensures that modulation depth is mathematically proportional to model confidence, transforming robotic audio into precise, human-centric communication.

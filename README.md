@@ -61,19 +61,24 @@ Follow these steps to set up the environment and run the application on your loc
 
 #### Step 2: Clone and Environment Setup
 ```bash
-git clone [https://github.com/DivitSrivastava/TheEmpathyEngine.git](https://github.com/DivitSrivastava/TheEmpathyEngine.git)
+git clone https://github.com/DivitSrivastava/TheEmpathyEngine.git
 cd TheEmpathyEngine
 python -m venv venv
 # Activate on Windows:
 venv\Scripts\activate
 # Activate on Mac/Linux:
 source venv/bin/activate
+```
 
 #### Step 3: Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 #### Step 4: Execute
 ```bash
 python app.py
+```
+
+Access the app using the URL which will be generated.
 
